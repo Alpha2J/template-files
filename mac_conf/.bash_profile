@@ -3,7 +3,8 @@
 alias ls='ls -G'
 alias ll='ls -Gl'
 alias ep="vim ~/.bash_profile"
-alias java_version="/usr/libexec/java_home"
+alias java_version_current="/usr/libexec/java_home"
+alias java_version_list="/usr/libexec/java_home -V"
 
 # env variable
 export JAVA_HOME="/Users/jeb/Library/Java/JavaVirtualMachines/corretto-1.8.0_372/Contents/Home"
