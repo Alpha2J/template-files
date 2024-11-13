@@ -40,7 +40,7 @@ func InitHttp() {
 	controller.AddUserRoutes(rgV1)
 
 	port := fmt.Sprintf("%d", config.GetAppConfig().Port)
-	logger.Info("HTTP server started with port :" + port)
+	logger.Infof("HTTP server started at port: %s with env: %s", port, config.GetEnv())
 	err := r.Run(":" + port)
 	if err != nil {
 		return
