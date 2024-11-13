@@ -6,5 +6,5 @@ mysql:
   port: 3306
   user: root
   password: specialpwd2233formysql.
-  dbname: message_service
+  dbname: service_template_go
 
