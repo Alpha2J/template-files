@@ -5,6 +5,7 @@ alias ll='ls -Gl'
 alias ep="vim ~/.bash_profile"
 alias java_version_current="/usr/libexec/java_home"
 alias java_version_list="/usr/libexec/java_home -V"
+alias kkk="sudo kill -HUP `ps ax | grep -v grep | grep SCIM | awk '{print $1}'`"
 
 # env variable
 export JAVA_HOME="/Users/jeb/Library/Java/JavaVirtualMachines/corretto-1.8.0_372/Contents/Home"
