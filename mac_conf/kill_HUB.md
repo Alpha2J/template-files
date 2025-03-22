@@ -9,6 +9,6 @@ mac的中文输入法经常抽风，导致系统转菊花直接卡死，需要�
 2. 给它可执行权限：`chmod +x /Users/noname/workspace/apps/hubkiller/hubkiller.sh`
 3. 用root身份来创建cron，`sudo crontab -e`，然后输入：
    ```bash
-   * * * * * /Users/noname/workspace/apps/hubkiller/hubkiller.sh && /bin/echo success >> /Users/noname/workspace/apps/hubkiller/result.log
+   0 * * * * /Users/noname/workspace/apps/hubkiller/hubkiller.sh && /bin/echo success >> /Users/noname/workspace/apps/hubkiller/result.log
    ```
 
