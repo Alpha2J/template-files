@@ -12,6 +12,7 @@ type ServerConfig struct {
 	Env         string      `mapstructure:"env"`
 	App         AppConfig   `mapstructure:"app"`
 	Mysql       MySqlConfig `mapstructure:"mysql"`
+	Redis       RedisConfig `mapstructure:"redis"`
 }
 
 type AppConfig struct {
@@ -25,6 +26,12 @@ type MySqlConfig struct {
 	User     string `mapstructure:"user"`
 	Password string `mapstructure:"password"`
 	Dbname   string `mapstructure:"dbname"`
+}
+
+type RedisConfig struct {
+	Host     string `mapstructure:"host"`
+	Port     string `mapstructure:"port"`
+	Password string `mapstructure:"password"`
 }
 
 const (
@@ -92,6 +99,10 @@ func GetAppConfig() *AppConfig {
 
 func GetMySqlConfig() *MySqlConfig {
 	return &config.Mysql
+}
+
+func GetRedisConfig() *RedisConfig {
+	return &config.Redis
 }
 
 func GetEnv() string {
