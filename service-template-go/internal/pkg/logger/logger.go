@@ -40,7 +40,7 @@ func init() {
 
 	logsDir := GetLogsDir()
 	infoWriteSyncer := zapcore.AddSync(&lumberjack.Logger{
-		Filename:   logsDir + "/app.info.log",
+		Filename:   logsDir + "/info.log",
 		MaxSize:    200, // megabytes
 		MaxBackups: 10,
 		MaxAge:     28,   //days
@@ -64,7 +64,7 @@ func init() {
 	sugaredInfoLogger = infoLogger.Sugar()
 
 	warnWriteSyncer := zapcore.AddSync(&lumberjack.Logger{
-		Filename:   logsDir + "/app.warn.log",
+		Filename:   logsDir + "/warn.log",
 		MaxSize:    200, // megabytes
 		MaxBackups: 10,
 		MaxAge:     28,   //days
@@ -88,7 +88,7 @@ func init() {
 	sugaredWarnLogger = warnLogger.Sugar()
 
 	errorWriteSyncer := zapcore.AddSync(&lumberjack.Logger{
-		Filename:   logsDir + "/app.error.log",
+		Filename:   logsDir + "/error.log",
 		MaxSize:    200, // megabytes
 		MaxBackups: 10,
 		MaxAge:     28,   //days
